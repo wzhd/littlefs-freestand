@@ -41,8 +41,7 @@
 // System includes
 #include <stdint.h>
 #include <stdbool.h>
-#include <string.h>
-#include <inttypes.h>
+#include <stddef.h>
 
 #ifndef LFS_NO_MALLOC
 #include <stdlib.h>
@@ -264,6 +263,14 @@ static inline void lfs_free(void *p) {
 #endif
 }
 
+void *memset(void *s, int c, size_t n);
+int memcmp(const void *s1, const void *s2, size_t n);
+void *memcpy(void *dest, const void *src, size_t n);
+char *strcpy(char *dst, const char *src);
+size_t strspn(const char *s, const char *accept);
+size_t strcspn(const char *s, const char *reject);
+char *strchr(const char *s, int c);
+size_t strlen(const char *s);
 
 #ifdef __cplusplus
 } /* extern "C" */
